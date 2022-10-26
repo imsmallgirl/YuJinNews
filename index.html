@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yujin News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="container">
+                <div class="header_left">
+                    <h1><a href="#">Yujin News</a></h1>
+                    <ul id="category-menu">
+                        <li>BUSINESS</li>
+                        <li>ENTERTAINMENT</li>
+                        <li>GENERAL</li>
+                        <li>HEALTH</li>
+                        <li>SCIENCE</li>
+                        <li>SPORTS</li>
+                        <li>TECHNOLOGY</li>
+                    </ul>
+                </div>
+                <div class="header_right">
+                    <input id="search-input" type="text">
+                    <button id="search-submit" class="xi-search"></button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="latest-news">
+                <div class="container">
+                    <div id="latest-header">
+                        <h2>Latest News</h2>
+                        <!-- <p id="weather"><img src="${weatherIcon}">${weatherContent}</p> -->
+                    </div>
+                    <div id="latest-contents">
+
+                    </div>
+                </div>
+            </section>
+            <section id="featured-news">
+                <div id="featured-header">
+                    <h2>Featured News</h2>
+                    <div id="featured-btns">
+                        <button class="xi-long-arrow-left"></button>
+                        <button class="xi-long-arrow-right"></button>
+                    </div>
+                </div>
+                <div id="slider-news">
+                    <ul>
+                        <!-- <li>
+                            <img src="${item.urlToImage}" alt="">
+                            <div>
+                                <p>
+                                    ${item.title}
+                                    <span>${item.content}</span>
+                                </p>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

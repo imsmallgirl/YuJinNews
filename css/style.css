@@ -1,0 +1,296 @@
+
+@import url('https://webfontworld.github.io/Poppins/Poppins.css');
+@import url('https://webfontworld.github.io/NanumMyeongjo/NanumMyeongjo.css');
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin : 0 auto;
+}
+
+body {
+    background-color: #f4f8fb;
+    font-family: 'Poppins';
+    color: #333;
+}
+
+header {
+    padding: 30px 0px 20px 0px;
+    border-bottom: 2px solid #ddd;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header_left {
+    display: flex;
+    align-items: center;
+}
+
+header .header_left h1 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+header .header_left h1 a{
+    color: #333;
+    text-decoration: none;
+}
+
+
+header .header_left #category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style : none;
+}
+
+header .header_left #category-menu li {
+    margin-right: 20px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+header .header_left #category-menu li:hover{
+    color:#549bc0;
+}
+
+header .header_right{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+header .header_right #search-input {
+    border: none;
+    background-color: transparent;
+    outline:none;
+}
+
+
+header .header_right #search-submit {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+/* main */
+
+#latest-news{
+}
+
+#latest-news .container{
+
+}
+
+#latest-news img{
+    width: 100%;
+}
+
+#latest-news dl{
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#latest-news dl dt {
+    font-family: 'NanumMyeongjo';
+    margin-bottom: 20px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+}
+
+#latest-news dl #news-cnt {
+    color: #999;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#latest-news dl #news-info {
+    color: #549bc0;
+    font-weight: 600;
+}
+
+#latest-news #latest-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 20px 0;
+}
+
+#latest-news #latest-header h2{
+    font-size: 30px;
+}
+
+#latest-news #latest-header #weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#latest-news #latest-header #weather img{
+    max-width: 20%;
+}
+
+
+#latest-news #latest-contents{
+    display: flex;
+}
+
+.news {
+    margin-bottom: 20px;
+}
+
+#latest-news #latest-contents #main-news {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#latest-news #latest-contents #main-news dl dt{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#latest-news #latest-contents #sub-news{
+    display:flex;
+    margin-left: 20px;
+    flex:2;
+}
+
+#latest-news #latest-contents #sub-news dl dt {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#latest-news #latest-contents #sub-news #mid-news {
+    margin-right: 20px;
+}
+
+#sub-news #mid-news #sec-news {
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#sub-news #mid-news #thr-news {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#sub-news #four-news {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+}
+
+/* featured */
+
+#featured-news {
+    overflow: hidden;
+}
+
+#featured-news #featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 20px 0;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 2px solid #ddd;
+}
+
+#featured-news #featured-header h2{
+    font-size: 30px;
+}
+
+#featured-header #featured-btns button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#featured-header #featured-btns button:last-child{
+    margin-left: 20px;
+}
+
+#slider-news {
+    width: 90%;
+    overflow: hidden;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+#slider-news img {
+    width: 100%;
+    max-height: 120px;
+}
+
+#slider-news ul {
+    position: relative;
+    transition: all 1s;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#slider-news ul li { 
+    height: 120px;
+    margin-right: 50px;
+    display: flex;
+    width: 500px;
+    align-items: center;
+}
+
+#slider-news ul li div {
+   margin-left: 20px;
+}
+
+#slider-news ul li div p {
+    width: 100%;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: 'NanumMyeongjo';
+    display: flex;
+    flex-direction: column;
+
+}
+
+#slider-news ul li div p span {
+    font-size: 14px;
+    font-weight: 200;
+    font-family: 'Poppins';
+    color:#999;
+    margin-top: 10px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+}
