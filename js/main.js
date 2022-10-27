@@ -202,7 +202,7 @@ const searchSubmit = document.getElementById('search-submit')
 const searchNewsApi = async () => {
     let keyword = searchInput.value;
     document.querySelector('#latest-header h2').innerText = `${keyword} News`
-    url = `https://newsapi.org/v2/everything?q=${keyword}&apiKey=254fba25c1ae4a5d9aa54ad3e2d72dc1`
+    url = `https://newsapi.org/v2/everything?q=${keyword}&apiKey=fbbe6bbee20d469da1b8bd97857a971c`
     NewsAPI();
 
     searchInput.value = '';
