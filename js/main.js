@@ -72,7 +72,7 @@ const NewsAPI = async() => {
 
         if(News.status == 200){
 
-            if(NewsData.totalResults === 0){
+            if(NewsData.totalArticles === 0){
                 throw new Error('검색된 뉴스가 없습니다.')
             }else{
                 latestNewsRender(NewsData);
@@ -98,14 +98,14 @@ function errorRender(message){
 // 최신 뉴스 가져오기
 
 const getNewsApi = async () => {
-    url = `https://gnews.io/api/v4/top-headlines?lang=en&max=4&token=02e104a4f558139f3a8d434ec2803527`
+    url = `https://gnews.io/api/v4/top-headlines?country=us&lang=en&max=4&token=02e104a4f558139f3a8d434ec2803527`
     NewsAPI();
 }
 
 // 과거 뉴스 갖고오기
 
 const getFeaturedNews = async () => {
-    let featuredNews = await fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=50&from=2022-10-26&to=2015-05-25&token=02e104a4f558139f3a8d434ec2803527`)
+    let featuredNews = await fetch(`https://gnews.io/api/v4/top-headlines?country=us&lang=en&max=50&to=2022-08-21T16:27:09Z&token=02e104a4f558139f3a8d434ec2803527`)
     let featuredData = await featuredNews.json();
     console.log(featuredData)
     featuredNewsRender(featuredData);
@@ -114,7 +114,9 @@ const getFeaturedNews = async () => {
 const latestNewsRender = async (data) => {
     let NewsHTML = ``;
     let articles = data.articles
-    
+    if(articles.image == 'null' || articles.image == ''){
+        articles.image = '../images/noImage.png'
+    }
     NewsHTML += `
     <div id="main-news" class="news">
     <img src="${articles[0].image}" alt="">
@@ -187,7 +189,7 @@ const getCategoryNews = async (event) => {
     const headerTitle = document.querySelector('#latest-header h2')
     headerTitle.innerText = `${event.target.textContent} Latest News`
     let category = event.target.textContent.toLowerCase()
-    url = `https://gnews.io/api/v4/top-headlines?topic=${category}&lang=en&max=4&token=02e104a4f558139f3a8d434ec2803527`
+    url = `https://gnews.io/api/v4/top-headlines?country=us&topic=${category}&lang=en&max=4&token=02e104a4f558139f3a8d434ec2803527`
     NewsAPI();
 }
 
@@ -203,7 +205,7 @@ const searchSubmit = document.getElementById('search-submit')
 const searchNewsApi = async () => {
     let keyword = searchInput.value;
     document.querySelector('#latest-header h2').innerText = `${keyword} News`
-    url = `https://gnews.io/api/v4/search?q=${keyword}&token=02e104a4f558139f3a8d434ec2803527`
+    url = `https://gnews.io/api/v4/search?country=us&q=${keyword}&max=4&token=02e104a4f558139f3a8d434ec2803527`
     NewsAPI();
 
     searchInput.value = '';
