@@ -64,18 +64,24 @@ function newsSlider(ul, featuredLength){
 let url;
 
 const NewsAPI = async() => {
+    
     try{
 
         let News = await fetch(url)
         let NewsData = await News.json();
+
         if(News.status == 200){
+
             if(NewsData.totalResults === 0){
                 throw new Error('검색된 뉴스가 없습니다.')
             }else{
                 latestNewsRender(NewsData);
             }
+
         }else{
+
             throw new Error(NewsData.message)
+
         }
 
     }catch(error){
@@ -92,14 +98,14 @@ function errorRender(message){
 // 최신 뉴스 가져오기
 
 const getNewsApi = async () => {
-    url = `https://newsapi.org/v2/top-headlines?country=us&page=1&pageSize=4&apiKey=254fba25c1ae4a5d9aa54ad3e2d72dc1`
+    url = `https://newsapi.org/v2/top-headlines?country=us&page=1&pageSize=4&apiKey=fbbe6bbee20d469da1b8bd97857a971c`
     NewsAPI();
 }
 
 // 과거 뉴스 갖고오기
 
 const getFeaturedNews = async () => {
-    let featuredNews = await fetch(`https://newsapi.org/v2/everything?q=apple&from=2022-10-26&to=2015-05-25&pageSize=50&sortBy=popularity&apiKey=254fba25c1ae4a5d9aa54ad3e2d72dc1`)
+    let featuredNews = await fetch(`https://newsapi.org/v2/everything?q=apple&from=2022-10-26&to=2015-05-25&pageSize=50&sortBy=popularity&apiKey=fbbe6bbee20d469da1b8bd97857a971c`)
     let featuredData = await featuredNews.json();
     featuredNewsRender(featuredData);
 }
@@ -180,7 +186,7 @@ const getCategoryNews = async (event) => {
     const headerTitle = document.querySelector('#latest-header h2')
     headerTitle.innerText = `${event.target.textContent} Latest News`
     let category = event.target.textContent.toLowerCase()
-    url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=254fba25c1ae4a5d9aa54ad3e2d72dc1`
+    url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=fbbe6bbee20d469da1b8bd97857a971c`
     NewsAPI();
 }
 
