@@ -250,6 +250,7 @@ header .header_right #search-submit {
 
 #slider-news ul {
     position: relative;
+    left:0;
     transition: all 1s;
     display: flex;
     list-style: none;
