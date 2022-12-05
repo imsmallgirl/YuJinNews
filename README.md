@@ -24,5 +24,21 @@
 
 * 뉴스 API 가 제공해주는 카테고리를 사용해, 상단에 있는 카테고리를 클릭 시 클릭한 카테고리와 관련된 뉴스를 보여줍니다.
 
-
 ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/108922353/205436655-0c431d0a-a723-4934-bfd0-354c74783b78.gif)
+
+
+> 과거 뉴스
+
+* 과거 뉴스를 하단부분에서 확인할 수 있도록 배치했습니다.
+
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/108922353/205551696-2d3bd9c6-6f37-4b9e-b542-f6b56f64c6fd.gif)
+
+
+> 키워드 검색
+
+* 원하는 키워드를 검색해, 키워드에 맞는 뉴스를 검색할 수 있도록 했습니다.
+
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/108922353/205552071-c25a5f01-eb37-43a1-a13c-600449fd7aaa.gif)
+
+
+![스크린샷 2022-12-05 오후 1 50 07](https://user-images.githubusercontent.com/108922353/205552020-4f8d81d8-e1cc-4d3d-9f64-b6b620216a55.png)
